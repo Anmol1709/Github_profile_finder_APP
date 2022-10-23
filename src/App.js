@@ -6,17 +6,17 @@ import About from './pages/About'
 import User from './pages/User'
 import NotFound from './pages/NotFound'
 import { GithubProvider } from './context/github/GithubContext'
-import {AlertProvider} from './context/alert/AlertContext'
+//import {AlertProvider} from './context/alert/AlertContext'
 
-import Alert from './components/layouts/Alert'
+//import Alert from './components/layouts/Alert'
 
 
 
 
 function App() {
   return (
-   <GithubProvider>
-    <AlertProvider>
+ <GithubProvider>
+   {/* //   <AlertProvider> */}
         <Router>
     <div className='flex flex-col justify-between h-screen'>
       <Navbar />
@@ -25,10 +25,9 @@ function App() {
       <main className='container mx-auto px-3 pb-12'>
  
       <Routes>
-      
-        <Route  exact path='/Home' element={<Home/>}/>     
+        <Route  exact path='/' element={<Home/>}/>     
         <Route path='/about' element={<About/>}/>
-        <Route path='/user/:login' element={<User/>}/>
+        <Route path='/user/:login' element={<User/>}/> 
         <Route path='/notFound' element={<NotFound/>}/>
         <Route path='/*' element={<NotFound/>}/>
         </Routes>
@@ -37,8 +36,8 @@ function App() {
      </div>
     
      </Router>
-     </AlertProvider>
-     </GithubProvider>
+    // {/* //  </AlertProvider> */}
+  </GithubProvider>
    
      
    

@@ -12,8 +12,8 @@ import RepoItem from './RepoItem'
       
          {repos.map((repo) => ( 
            <RepoItem key ={repo.id} repo={repo}/>
-     
-      ))}   
+    
+      ))    }
     </div>
   </div>
    )
